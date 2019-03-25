@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<script>
+			function validateForm() {
+			  var userid = document.forms["myForm"]["userID"].value;
+			  var passwordid = document.forms["myForm"]["passwordID"].value;
+			  var zipid = document.forms["myForm"]["zipID"].value;
+			  var emailid = document.forms["myForm"]["emailID"].value;
+			  
+			  var userPattern= new RegExp("^(?=.*?[0-9]).{8,}$");
+			  
+			  
+			 // document.write(userid is:" + userid); 
+			  if (userid == "" || (6>userid.length)) {
+				alert("Name must be filled out");
+				return false;
+			  }
+			  if (userPattern.test(userid)) {
+				alert("Password invalid");
+				return false;
+			  }
+			  
+			}
+		</script>
+	</head>
+
+	<body>
+		<h2 text-align="center">Information Validation</h2>
+		
+		<form name="myForm" action="/action_page.php" onsubmit="return validateForm()" method="post">
+		  
+			<table>
+				<tr>
+					<td>User ID: </td>
+					<td><input type="text" name="userID"></td>
+				</tr>
+				<tr>
+					<td>Password: </td>
+					<td><input type="password" name="passwordID"></td>
+				</tr>
+				<tr>
+					<td>zip code: </td>
+					<td><input type="text" name="zipID"></td>
+				</tr>
+				<tr>
+					<td>Email: </td>
+					<td><input type="text" name="emailID"></td>
+				</tr>
+				<tr>
+					<td><input type="submit" value="Submit"></td>
+				</tr>
+				
+			</table>
+		 
+		  
+		  
+		  
+		</form>
+
+	</body>
+</html>
