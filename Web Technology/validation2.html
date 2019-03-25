@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang = "en">
+
+	<head>
+		<meta charset = "UTF-8"/>
+		<title>Javascript Fundamentals</title>
+		<link rel ="stylesheet" type ="text/css" href ="js1.css">
+	</head>
+
+	<body>
+
+			
+				<form action="#" method="post" onsubmit ="return validation();">
+					<table>
+						<tr>
+							<td>UserId: </td>
+							<td><input type ="text" name="userID" id="userID"></td>
+						</tr>
+						<tr>
+							<td>Password: </td>
+							<td><input type ="password" name="passwordID" id="passwordID"></td>
+						</tr>
+						<tr>
+							<td>Zip Code: </td>
+							<td><input type ="text" name="zipID" id="zipID"></td>
+						</tr>
+						<tr>
+							<td>Email: </td>
+							<td><input type ="text" name="emailID" id="emailID"></td>
+						</tr>
+						
+						<tr>
+							<td>
+							<input type ="submit" value="Submit" name ="submit" >
+							</td>
+						</tr>
+					</table>
+				</form>
+				
+				<script type="text/javascript">
+					function validation(){
+						alert("Hello! I am an alert box!!");
+						var userid = document.getElementById('userID').value;
+						var passwordid = document.getElementById('passwordID').value;
+						var zipid = document.getElementById('zipID').value;
+						var emailID = document.getElementById('emailID').value;
+					}
+					
+					if(userid==''){
+						alert('required');
+						
+						return false;
+					}
+					else{
+						alert('required');
+					}
+				</script>	
+
+		
+	</body>
+</html>
